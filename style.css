@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.text-primary{
+    color: chartreuse;
+}
+#header-section{
+    display: flex;
+    background: #333333;
+    position: sticky;
+    top: 0;
+    color: #ffffff;
+    padding: 1.25rem;
+    justify-content: space-between;
+}
+.navbar{
+    padding-top: 0.65rem;
+    overflow: hidden;
+}
+#header-section .navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem;
+    margin: 0 0.25rem;
+}
+.navbar ul li .dropdown{
+    position: absolute;
+    width: 160px;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+    top: 60px;
+    padding: 12px 0;
+    visibility: hidden;
+    z-index: 99;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.navbar ul li .dropdown li{
+    padding: 6px;
+}
+.navbar ul li .dropdown li a::after{
+    display: none;
+}
+.navbar ul li:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+}
+.navbar ul li>a:hover{
+    color: chartreuse;
+}
+.navbar ul li:last-child {
+	margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.top-option{
+    display: flex;
+    align-items: center;
+}
+.top-option .to-search i {
+	font-size: 16px;
+	cursor: pointer;
+}
+.top-option .to-social a {
+	display: inline-block;
+	color: #ffffff;
+	font-size: 16px;
+	margin-left: 15px;
+}
+.img{
+    background: url('./portfolio_details.jpg') no-repeat center center/cover;
+    height: 100vh;
+}
+@media(max-width: 767px){
+    .navbar{
+        display: none;
+    }
+}
